@@ -2,6 +2,6 @@ body{
 	background-color: olive;
 }
 
-h1, p{
+h1, h2, ul, li, p{
 	color: gold;
 }

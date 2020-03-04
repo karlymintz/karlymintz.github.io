@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700,700i|Montserrat:400,400i,700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: Helvetica;
+}
+.clearfix:after{
+	content:" ";
+	display: block;
+	clear: both;
+}
+img{
+	display: block;
+	width: 100%;
+	max-width: 100%;
+}
+main{
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+#narrow{
+	width: 33.33%;
+	padding: 20px;
+}	
+#wide{
+	width: 66.66%
+}
+.podcastepisode{
+	width: 33.33%;
+	float: left;
+	position: relative;
+}
+.episodeimage img{
+	width: 50%;
+	float: left;
+}
+.podcastepisode figcaption{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.75);
+	padding: 20px;
+	opacity: 0;
+	transition: opacity ease-in-out 300ms;
+}
+.podcastepisode small, .podcastepisode time{
+	padding-right: 10px;
+	padding-top: 10px;
+	display: inline-block;
+}
+.podcastepisode:hover figcaption{
+	opacity: 1;
+}
+.podcastepisode figure img:nth-child(2){
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity ease-in-out 300ms;
+	z-index: 2;
+}
+.podcastepisode:hover figure img:nth-child(2){
+	opacity: 1;
+}
+.contentdetails{
+	padding: 20px;
+	display: flex;
+}
+.contentdetails h3{
+	font-size: 50px;
+}
+.contentdetails p{
+	font-size: 25px;
+}
+.contentdetails small, .contentdetails time{
+	padding-right: 10px;
+	padding-top: 10px;
+	display: inline-block;
+	font-size: 18px;
+}
+h1{
+	font-size: 60px;
+	font-family: 'Montserrat', sans-serif;
+	color: #222;
+	font-weight: 400;
+}
+h2{
+	font-size: 35px;
+	font-family: 'Montserrat', sans-serif;
+	color: #222;
+	margin-bottom: 20px;
+}
+h3{
+	font-size: 20px;
+	font-family: 'Montserrat', sans-serif;
+	color: #222;
+	font-weight: 400;
+}
+time{
+	font-family: 'EB Garamond', serif;
+	font-size: 13px;
+}
+small{
+	font-family: 'EB Garamond', serif;
+	font-size: 13px;
+}
+#slogan{
+	font-family: 'EB Garamond', serif;
+}
+.button{
+	padding: 0px 25px 15px 0px;
+	display: block;
+	width: 120px;
+	margin: 5px 5px 20px 5px;
+	text-align: left;
+}
+a{
+	color: #222;
+	text-decoration: none;
+}
+span {
+  content: "\21FE";
+  display: inline-block;
+  size: 20px;
+}
+p{
+	font-size: 16px;
+	font-family: 'EB Garamond', serif;
+}
+audio{
+	margin-top: 20px;
+	display: block;
+}
+nav a{
+	font-size: 20px;
+}
+.socialbuttons{
+	padding-right: 20px;
+	padding-top: 10px;
+}
+.socialbuttons a{
+	width: 30px;
+	display: block;
+	padding-bottom: 5px;
+}
+
+@media only screen and (max-width: 900px){
+	.podcastepisode{
+		width: 50%;
+	}
+}
+@media only screen and (max-width: 750px){
+	.podcastepisode{
+		float: none;
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 650px){
+	#narrow, #wide{
+		width: 100%;
+	}
+	main{
+		flex-direction: column;
+	}
+.podcastepisode figcaption{
+	position: relative;
+	opacity: 1;
+	background-color: transparent;
+} 
+.podcastepisode figcaption:after{
+	content:" ";
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: #222;
+	margin-top: 20px;
+}
+}
+.touchevents .podcastepisode figcaption{
+	position: relative;
+	opacity: 1;
+	background-color: transparent;
+}
+.touchevents .podcastepisode figcaption:after{
+	content:" ";
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: #222;
+	margin-top: 20px;
+}
